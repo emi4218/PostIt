@@ -17,10 +17,16 @@ class PostIt {
     }
 
 
-    affiche() {
+    afficher() {
         let monPostIt = document.createElement('div');
         monPostIt.classList.add('postIt');
-        monPostIt.style.gridArea = this.x + "/" + this.y;
+        monPostIt.style.display = "fixed";
+        monPostIt.style.top = this.y + "px";
+        monPostIt.style.left = this.x + "px";
+        monPostIt.style.width = this.largeur + "px";
+        monPostIt.style.height = this.hauteur + "px";
+        monPostIt.style.backgroundColor = this.couleur;
+        monPostIt.innerHTML = "";
         document.appendChild(monPostIt);
     }
 }
