@@ -7,7 +7,8 @@ class PostIt {
     couleur;
     texte;
 
-    constructor(x, y, largeur, hauteur, couleur, texte) {
+    constructor(plateau, x, y, largeur, hauteur, couleur, texte) {
+        this.plateau = plateau;
         this.x = x;
         this.y = y;
         this.largeur = largeur;
@@ -19,7 +20,6 @@ class PostIt {
 
     afficher() {
         let monPostIt = document.createElement('div');
-        contain.appendChild(monPostIt);
         monPostIt.classList.add('postIt');
         monPostIt.style.display = "fixed";
         monPostIt.style.top = this.y + "px";
@@ -28,6 +28,6 @@ class PostIt {
         monPostIt.style.height = this.hauteur + "px";
         monPostIt.style.backgroundColor = this.couleur;
         monPostIt.innerHTML = "";
-
+        this.plateau.appendChild(monPostIt);
     }
 }
