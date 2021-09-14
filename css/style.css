@@ -9,7 +9,12 @@
     box-shadow: 5px 5px 15px rgb(61, 61, 61);
 }
 
-.stockage {
+body {
+    width: 90%;
+    margin: auto;
+}
+
+#stockage {
     display: flex;
     flex-direction: row;
     margin: 30px;
@@ -31,4 +36,37 @@
 }
 .yellow {
     background-color: var(--var-yellow);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    border: sienna 2px solid;
+    background-color: rosybrown;
+    padding: 30px;
+}
+
+h1 {
+padding: 30px;
+}
+
+#contain {
+    border: royalblue 1px solid;
+    height: 90vh;
+}
+
+.bottomMenu {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.fas, .far {
+    margin: 10px;
+}
+
+.bottomMenu {
+    background-color: seagreen;
 }
