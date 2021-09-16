@@ -26,8 +26,8 @@ window.addEventListener('load', () => {
 
     document.getElementById('stockage').addEventListener('click', event => {
         console.log('ajout post-it')
-        tabPostIt.push(new PostIt(plateau, tabPostIt.length));
-        tabPostIt[tabPostIt.length - 1].afficher(plateau);
+        tabPostIt.push(new PostIt(plateau, tabPostIt.length)); // push ajoute un élément dans le tableau
+        tabPostIt[tabPostIt.length - 1].afficher(plateau); // on met -1 parce qu'après le push, le tableau vaut 1 mais le tableau commence à 0
     })
 
     document.addEventListener('click', () => { // pour pouvoir cliquer à nouveau quand on a déplacé le post-it
